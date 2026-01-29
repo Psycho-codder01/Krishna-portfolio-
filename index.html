@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Furniture</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#1b120d;
+  color:#f5e6c8;
+}
+
+/* ===== HEADER ===== */
+.sticky-wrap{position:sticky; top:0; z-index:999;}
+header{
+  background:linear-gradient(to right,#2a160d,#3b2419);
+  padding:10px 50px 8px;
+  border-bottom:1px solid rgba(212,175,55,.4);
+}
+.logo{
+  font-family:'Great Vibes',cursive;
+  font-size:34px;
+  color:#d4af37;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  margin-top:12px;
+  display:flex;
+  gap:22px;
+  overflow-x:auto;
+  white-space:nowrap;
+}
+.navbar::-webkit-scrollbar{display:none;}
+.navbar a{
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  text-decoration:none;
+  color:#1b120d;
+  background:linear-gradient(135deg,#d4af37,#f3d27a);
+  padding:6px 16px;
+  border-radius:18px;
+  box-shadow:0 3px 8px rgba(212,175,55,.35);
+  transition:.25s;
+}
+.navbar a:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(212,175,55,.55);
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:20vh;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 50px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:#f5deb3;
+}
+
+/* ===== ABOUT ===== */
+.highlight-section{
+  padding:40px 50px;
+  margin-bottom:50px;
+}
+.about-content{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.highlight-section img{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 20px rgba(212,175,55,.5);
+}
+.highlight-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:#d4af37;
+  margin-bottom:15px;
+}
+.highlight-section p{
+  font-size:17px;
+  line-height:1.7;
+  color:#e6d8b8;
+}
+
+/* ===== WORK ===== */
+section{padding:40px 50px;}
+section h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:#d4af37;
+  margin-bottom:15px;
+}
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+.work-grid img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(212,175,55,.3);
+  transition:.3s;
+}
+.work-grid img:hover{
+  transform:scale(1.05);
+  box-shadow:0 6px 25px rgba(212,175,55,.5);
+}
+
+/* ===== SERVICE ===== */
+.service-list{margin-left:20px; margin-bottom:15px;}
+.service-list li{margin-bottom:8px;}
+
+/* ===== CONTACT ===== */
+.contact-button{
+  display:inline-block;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:white;
+  font-size:18px;
+  padding:10px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 4px 10px rgba(37,211,102,.5);
+}
+.contact-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(37,211,102,.6);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:22px;
+  background:#140c08;
+  color:#c9b27c;
+  font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{padding:10px 20px 8px;}
+  .logo{font-size:28px;}
+  .hero{padding:0 20px;}
+  section,.highlight-section{padding:40px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="sticky-wrap">
+<header>
+  <div class="logo">Krishna Furniture</div>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#service">Service</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Handcrafted Furniture Built to Last</h1>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="highlight-section">
+<div class="about-content">
+  <div style="flex:1; display:flex; justify-content:center;">
+    <img id="aboutImage" src="about.jpg" alt="About Image">
+  </div>
+  <div style="flex:2;">
+    <h2>About Me</h2>
+    <p>
+      I am a skilled furniture craftsman with 5+ years of experience.
+      I create premium handcrafted furniture with strong build,
+      elegant finish and long-lasting quality that clients trust.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+<h2>Work</h2>
+<div class="work-grid" id="workGrid"></div>
+</section>
+
+<!-- SERVICE -->
+<section id="service">
+<h2>Service</h2>
+<ul class="service-list">
+  <li>Sofa – Custom & comfortable</li>
+  <li>Bed – Strong & stylish</li>
+  <li>Chair – Handcrafted quality</li>
+  <li>All wooden furniture work</li>
+</ul>
+<p>
+We provide high-quality furniture at reasonable prices.
+Customer satisfaction and trust is our first priority.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<a class="contact-button" href="https://wa.me/918530436798" target="_blank">
+Chat on WhatsApp
+</a>
+</section>
+
+<footer>
+© 2026 Krishna Furniture
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const workGrid = document.getElementById("workGrid");
+
+  for(let i=1;i<=19;i++){
+    const img=document.createElement("img");
+    img.src=`work${i}.jpg`;
+    img.alt=`Work ${i}`;
+    img.onerror=()=>img.style.display="none";
+    workGrid.appendChild(img);
+  }
+});
+</script>
+
+</body>
+</html>
